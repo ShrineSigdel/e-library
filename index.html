@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <img src="./images/logo.png" alt="logo" />
+        <div class="btn">Book Count : 0</div>
+      </div>
+    </div>
+    <div class="book-grid"></div>
+    <dialog class="form-dialog">
+      <form action="#">
+        <div class="wrapper">
+          <input type="text"id="book-name"placeholder="Book's Name"maxlength="50"required/>
+        </div>
+        <div class="wrapper">
+          <input
+            type="text"
+            id="author-name"
+            placeholder="Author"
+            maxlength="50"
+            required
+          />
+        </div>
+        <div class="wrapper">
+          <input
+            type="number"
+            id="pages"
+            placeholder="Pages"
+            maxlength="6"
+            required
+          />
+        </div>
+        <div class="wrapper">
+          <label for="read-status"
+            >Read Status : <input type="checkbox" id="read-status" checked />
+          </label>
+        </div>
+        <button class="btn" type="submit" formmethod="dialog">Submit</button>
+      </form>
+    </dialog>
+    <button class="btn add-book">+Add Book</button>
+  </body>
+</html>

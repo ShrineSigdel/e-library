@@ -1,0 +1,155 @@
+:root {
+  --primary-color: #313a5b; /*text and background; */
+  --secondary-color: #1cd881; /* buttons*/
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+/* Reset form elements */
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+
+/* Containers and headers */
+.container {
+  width: min(90%, 1080px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  display: flex;
+}
+
+.header img {
+  height: 8em;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  padding: 0.5em 1em 0.5em 1em;
+  font: inherit;
+  letter-spacing: 0.1rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.header .btn {
+  background: var(--secondary-color);
+  margin-left: auto;
+  color: var(--primary-color);
+}
+
+.btn.add-book {
+  position: fixed;
+  top: 85vh;
+  right: 5%;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.btn.add-book:hover,
+button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn.remove {
+  font-weight: bold;
+  text-align: center;
+  background-color: #ff9999;
+  color: var(--primary-color);
+}
+
+.btn.remove:hover {
+  filter: brightness(80%);
+}
+
+/* Book cards */
+.book-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 15px;
+  margin: 2.5% 10% 0 10%;
+}
+
+/* Book styling */
+.book {
+  word-wrap: break-word;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  font: inherit;
+  color: var(--primary-color);
+  justify-content: space-evenly;
+  text-align: center;
+  max-width: 400px;
+}
+
+.book .title {
+  font-size: 2rem;
+  font-family: "Agbalumo", serif;
+}
+.book * {
+  margin-bottom: 0.5em;
+}
+
+/* Forms and Dialogs */
+.form-dialog {
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  background-color: #eeeeee;
+}
+
+.form-dialog::backdrop {
+  background: linear-gradient(45deg, #313a5b, #1cd881);
+  opacity: 0.1;
+}
+
+.form-dialog form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.wrapper {
+  margin-bottom: 0.5em;
+}
+
+input {
+  cursor: pointer;
+  padding: 10px;
+  border: 2.5px solid var(--primary-color);
+  border-radius: 20px;
+}
