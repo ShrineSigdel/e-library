@@ -43,12 +43,15 @@ function validateForm() {
   return true;
 }
 
-function Book(bookName, author, pages, readStatus) {
-  // the constructor...
-  this.bookName = bookName;
-  this.author = author;
-  this.pages = pages;
-  this.readStatus = readStatus === true ? "Read" : "Not Read";
+
+//book constructor
+class Book {
+  constructor (bookName, author , pages, readStatus) {
+    this.bookName = bookName;
+    this.author = author;
+    this.pages = pages;
+    this.readStatus = readStatus === true ? "Read" : "Not Read";
+  }
 }
 
 function addBookToLibrary() {
